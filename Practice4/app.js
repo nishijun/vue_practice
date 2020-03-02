@@ -15,7 +15,10 @@ new Vue({
   },
   watch: {
     counter: function(value) {
-      
+      let vm = this;
+      setTimeout(() => {
+        vm.counter = 0;
+      }, 2000);
     }
   },
   methods: {
