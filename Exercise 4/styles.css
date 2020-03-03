@@ -31,11 +31,8 @@
   height: 50px;
 }
 
-.a {
-  border: 3px solid black;
-}
-.b {
-  background: green;
-  width: 100px;
-  height: 100px;
+.progress-bar {
+  width: 200px;
+  height: 20px;
+  border: 1px solid black;
 }
