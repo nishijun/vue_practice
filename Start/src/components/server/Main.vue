@@ -7,14 +7,21 @@
               </li>
           </ul>
       </div>
-      <div class="col-xs-12 col-sm-6">
-          <p>Server Details are currently not updated</p>
-      </div>
+      <serverDetail></serverDetail>
   </div>
 </template>
 
 <script>
+import ServerDetail from './ServerDetail.vue'
 export default {
-  
+  components: {
+    'serverDetail': ServerDetail
+  }
 }
 </script>
+
+<style scoped>
+  div {
+    border: 1px solid blue;
+  }
+</style>
