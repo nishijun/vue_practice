@@ -1,16 +1,16 @@
 <template>
   <li class="list-group-item" style="cursor:pointer" @click="serverSelected">
-    Server #{{ id }}
+    Server #{{ server.id }}
   </li>
 </template>
 
 <script>
 import { serverBus } from '../../main'
 export default {
-  props: ['id'],
+  props: ['server'],
   methods: {
     serverSelected() {
-      serverBus.$emit('serverSelected', this.id)
+      serverBus.$emit('serverSelected', this.server)
     }
   }
 }
