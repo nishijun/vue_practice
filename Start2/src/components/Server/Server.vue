@@ -1,11 +1,10 @@
 <template>
-  <li class="list-group-item" style="cursor:pointer" @click="serverSelected">
-    Server #{{ server.id }}
-  </li>
+    <li style="cursor:pointer" @click="serverSelected">Server #{{ server.id }}</li>
 </template>
 
 <script>
 import { serverBus } from '../../main'
+
 export default {
   props: ['server'],
   methods: {
@@ -15,7 +14,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

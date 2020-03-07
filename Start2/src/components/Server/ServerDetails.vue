@@ -1,9 +1,8 @@
 <template>
     <div class="col-xs-12 col-sm-6">
-        <p v-if="!server">Please select a Server</p>
+        <p v-if="!server">Please select a server</p>
         <p v-else>Server #{{ server.id }} selected, Status: {{ server.status }}</p>
-        <hr>
-        <button @click="resetStatus">Change to Normal</button>
+        <button @click="changeStatus">Change Status</button>
     </div>
 
 </template>
@@ -17,15 +16,15 @@ export default {
       server: null
     }
   },
-  methods: {
-    resetStatus() {
-      this.server.status = 'Normal'
-    }
-  },
   created() {
     serverBus.$on('serverSelected', (server) => {
       this.server = server
     })
+  },
+  methods: {
+    changeStatus() {
+      this.server.status = 'Normal'
+    }
   }
 }
 </script>
