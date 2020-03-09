@@ -1,5 +1,7 @@
 <template>
-    <li style="cursor:pointer" @click="serverSelected">Server #{{ server.id }}</li>
+  <li class="list-group-item" style="cursor:pointer" @click="serverSelected">
+      Server #{{ server.id }}
+  </li>
 </template>
 
 <script>

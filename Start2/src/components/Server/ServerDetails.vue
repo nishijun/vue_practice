@@ -1,8 +1,8 @@
 <template>
     <div class="col-xs-12 col-sm-6">
-        <p v-if="!server">Please select a server</p>
+        <p v-if="!server">Please select your server</p>
         <p v-else>Server #{{ server.id }} selected, Status: {{ server.status }}</p>
-        <button @click="changeStatus">Change Status</button>
+        <button @click="changeStatus">Back to Normal</button>
     </div>
 
 </template>
