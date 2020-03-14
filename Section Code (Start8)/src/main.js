@@ -1,5 +1,19 @@
 import Vue from 'vue'
+import VueResource from 'vue-resource'
 import App from './App.vue'
+
+Vue.use(VueResource)
+Vue.http.options.root = 'https://vuejs-http-55905.firebaseio.com/data.json'
+Vue.http.interceptors.push((request, next) => {
+  console.log(request)
+  if (request.method == 'POST') {
+    request.method = 'PUT'
+  }
+  next(response => {
+    response.json = () => { return {messages: respinse.body}
+    }
+  })
+})
 
 new Vue({
   el: '#app',
