@@ -30,7 +30,11 @@ export default {
     }
   },
   beforeRouteEneter(to, from, next) {
-    next()
+    if (true) {
+      next()
+    } else {
+      next(false)
+    }
   }
 }
 </script>
