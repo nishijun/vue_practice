@@ -6,13 +6,13 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+import { mapGetters } from 'vuex'
+import * as types from '../store/types'
 export default {
-  methods: {
-    ...mapMutations([
-      'increment',
-      'decrement'
-    ])
+  computed: {
+    ...mapGetters({
+      counter: types.DOUBLE_COUNTER,
+    })
   }
 }
 </script>
