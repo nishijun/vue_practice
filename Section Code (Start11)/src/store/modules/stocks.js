@@ -5,7 +5,7 @@ const state = {
 }
 
 const mutations = {
-  'SET＿STOCKS' (state, stocks) {
+  'SET_STOCKS' (state, stocks) {
     state.stocks = stocks
   },
   'RND_STOCKS' (state) {
