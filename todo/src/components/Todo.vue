@@ -32,22 +32,37 @@ export default {
 
 <style scoped>
 .todo {
-  width: 500px;
+  width: 100%;
   margin: 0 auto 20px;
-  height: 150px;
+  height: 100px;
   box-sizing: border-box;
   padding: 20px;
   background: white;
   border: 1px solid #aaa;
   border-radius: 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .todo.isDone {
   background: #aaa;
 }
+.todo.isDone p {
+  text-decoration: line-through;
+}
 .todo-main {
   display: flex;
   align-items: center;
-  justify-content: center;
+  width: 100%;
+}
+.todo-main p {
+  width: 100%;
+}
+.todo-sub {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 .btn {
   cursor: pointer;
@@ -58,6 +73,7 @@ export default {
   border: none;
   font-size: 16px;
   border-radius: 5px;
+  margin-bottom: 10px;
 }
 .edit {
   background: lightgreen;
@@ -65,10 +81,12 @@ export default {
 }
 .delete {
   background: red;
+  margin-right: 10px;
 }
 .judge {
   background: skyblue;
-  margin-top: 20px;
+  margin-bottom: 0;
+  margin-left: 10px;
 }
 input[type="text"] {
   width: 100%;

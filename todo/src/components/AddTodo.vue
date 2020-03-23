@@ -1,8 +1,7 @@
 <template>
   <div>
     <label for="add">Add Todo</label><br>
-    <input id="add" type="text" v-model="content"><br>
-    <button class="btn" @click="addTodo">Add</button>
+    <input id="add" type="text" v-model="content" @change="addTodo"><br>
   </div>
 </template>
 
@@ -24,15 +23,14 @@ export default {
 </script>
 
 <style scoped>
-.btn {
-  cursor: pointer;
-  width: 60px;
-  height: 30px;
-  color: white;
-  float: right;
-  border: none;
+input {
+  width: 100%;
+  height: 40px;
+  background: rgb(217, 211, 178);
   font-size: 16px;
-  border-radius: 5px;
-  background: blue;
+  border: none;
+  outline: none;
+  padding: 10px;
+  box-sizing: border-box;
 }
 </style>
